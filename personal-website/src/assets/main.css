@@ -1,0 +1,90 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f5f6;
+  font-weight: normal;
+}
+
+/* pallette:
+#9AC5F4
+#99DBF5
+#A7ECEE
+#FFEEBB
+
+or
+#FFE6E6
+#F2D1D1
+#DAEAF1
+#C6DCE4
+
+#F8F6F4
+#E3F4F4
+#D2E9E9
+#C4DFDF
+*/
+
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+.sidebar {
+  flex: 0 0 250px; /* Specify a fixed width */
+  height: 100vh; /* Fill out the entire vertical height */
+  background-color: #f8e8ee;
+  padding: 10px;
+  overflow-y: auto; /* Add vertical scrollbar if needed */
+}
+
+.skeleton {
+  width: 100%;
+  height: 20px;
+  background-color: #e3f4f4;
+  margin-bottom: 10px;
+  animation: skeleton-animation 1s infinite alternate;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  max-width: calc(100% - 20px);
+  max-height: 100%;
+  object-fit: cover;
+}
+
+@keyframes skeleton-animation {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: #9ac5f4;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
